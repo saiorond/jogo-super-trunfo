@@ -1,3 +1,17 @@
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #000000;
+    padding-bottom: 20vh;
+    text-align: center;
+}
+
 .container {
-    background: black;
+    text-align: center;
+    padding: 20px;
+}
+
+#carta-jogador, #carta-maquina {
+    width: inherit;
+    height: inherit;
+    position: absolute;
 }
