@@ -11,13 +11,24 @@ body {
 }
 
 #carta-jogador, #carta-maquina {
-    width: inherit;
-    height: inherit;
-    position: absolute;
+    width: 360px;
+    height: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    position: relative;
+    background-size: 350px 300px;
+    background: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 10px;
+    border-radius: 33px; 
 }
 
-#zerar_jogo, #sortear_carta, #jogar {
+.botao {
     padding: 15px;
+    margin: 10px;
     font-size: 20px;
     font-weight: bold;
     font-family: 'Cinzel', serif;
@@ -25,7 +36,9 @@ body {
     border-radius: 8px;
 }
 
-#zerar_jogo, #sortear_carta, #jogar :hover {
+.botao:hover {
     cursor: pointer;
-    border: 2px solid rgb(121, 0, 0);
+    border: 3px solid rgb(121, 0, 0);
+    color: rgb(121, 0, 0);
+    font-size: 22px;
 }
