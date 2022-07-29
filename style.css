@@ -15,3 +15,17 @@ body {
     height: inherit;
     position: absolute;
 }
+
+#zerar_jogo, #sortear_carta, #jogar {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    background: rgb(204, 203, 203);
+    border-radius: 8px;
+}
+
+#zerar_jogo, #sortear_carta, #jogar :hover {
+    cursor: pointer;
+    border: 2px solid rgb(121, 0, 0);
+}
