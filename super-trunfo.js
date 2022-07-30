@@ -118,18 +118,11 @@ var carta1 = {
     }
   };
   
-  var cartas = [
-    carta1,
-    carta2,
-    carta3,
-    carta4,
-    carta5,
-    carta6,
-    carta7,
-    carta8,
-    carta9,
-    carta10
-  ];
-  
+  var cartas = [carta1, carta2, carta3, carta4, carta5, carta6, carta7, carta8, carta9, carta10];
+
   var cartaMaquina;
   var cartaJogador;
+
+  function sortearCarta() {
+    
+  }
