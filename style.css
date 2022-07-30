@@ -3,11 +3,25 @@ body {
     background-color: #000000;
     padding-bottom: 20vh;
     text-align: center;
-    background-image: url(https://cdna.artstation.com/p/assets/images/images/025/961/608/large/thiago-baltar-sanatorio-mapa-final.jpg?1587472667);
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/60045395770229.5e9f3378e24dc.jpg);
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
     padding-bottom: 20vh;
+}
+
+.logo {
+    width: 36em;
+    height: 18em;
+}
+
+
+h2, .titulo {
+    font-size: 45px;
+    color:aliceblue;
+    text-shadow: rgb(121, 0, 0) 1.8px 1.8px;
+    margin-bottom: 20px;
+    
 }
 
 .container {
