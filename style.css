@@ -3,6 +3,11 @@ body {
     background-color: #000000;
     padding-bottom: 20vh;
     text-align: center;
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/025/961/608/large/thiago-baltar-sanatorio-mapa-final.jpg?1587472667);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-bottom: 20vh;
 }
 
 .container {
@@ -17,13 +22,18 @@ body {
     margin-bottom: 20px;
     display: flex;
     align-items: flex-end;
-    flex-direction: row;
     position: relative;
     background-size: 350px 300px;
     background: no-repeat;
     background-position-x: 5px;
     background-position-y: 10px;
     border-radius: 33px; 
+}
+
+.caixa {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .botao {
