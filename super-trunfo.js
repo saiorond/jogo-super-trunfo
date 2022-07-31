@@ -170,3 +170,20 @@ function jogar() {
   document.getElementById("jogar").desabled = true;
 }
 
+function exibirCartaJogador() {
+  let divCartaJogador = document.getElementById("carta-jogador");
+    divCartaJogador.style.backgroundImage = `url(${cartaJogador.imagem})`;
+
+  let moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style="width: inherit; height: inherit; position: absolute;">';
+
+  let tagHtml = "<div id='opcoes' class='carta-status'>";
+
+  let opcoesTexto = "";
+  for(var atributo in cartaJogador.atributos) {
+    opcoesTexto += "<input type='radio name='atributo' value='" + atributo + "'>" + atributo + " " + cartaJogador.atributos[atributo] + "<br>" ;
+  }
+
+  let nome = `<p class="carta-subtitle">${cartaJogador.nome}</p>`;
+  divCartaJogador.innerHTML = moldura + nome + tagHtml + opcoesTexto + "</div>";
+}
+
