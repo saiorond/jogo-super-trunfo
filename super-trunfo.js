@@ -120,9 +120,20 @@ var carta1 = {
   
   var cartas = [carta1, carta2, carta3, carta4, carta5, carta6, carta7, carta8, carta9, carta10];
 
-  var cartaMaquina;
-  var cartaJogador;
+  let cartaMaquina;
+  let cartaJogador;
 
   function sortearCarta() {
-    
+      let numeroCartaMaquina = parseInt(Math.random() * 10);
+      cartaMaquina = cartas[numeroCartaMaquina];
+
+      let numeroCartaJogador = parseInt(Math.random() * 10);
+      cartaJogador = cartas[numeroCartaJogador];
+
+      while (numeroCartaMaquina == numeroCartaJogador) {
+        numeroCartaJogador = parseInt(Math.random() * 10);
+      }
+
+      document.getElementById("sortear_carta").disabled = true;
+      document.getElementById("jogar").disabled = false;
   }
