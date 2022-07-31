@@ -140,7 +140,7 @@ function sortearCarta() {
     exibirCartaJogador();
 }
 
-function obtemAtiriburtoSeçecionado() {
+function obtemAtiriburtoSelecionado() {
   let radioAtributos = document.getElementsByName("atributo");
 
   for (var i = 0; i < radioAtributos.length; i++) {
@@ -149,3 +149,24 @@ function obtemAtiriburtoSeçecionado() {
     }
   }
 }
+
+function jogar() {
+  let atributoSelecionado = obtemAtiriburtoSelecionado();
+  let divResultado = document.getElementById("resultado");
+
+  if (
+    cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
+      htmlResultado ="<p class='resultado-final'>Você venceu</p>";
+  } else if (
+    cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
+      htmlResultado ="<p class='resultado-final'>Você perdeu</p>";
+  } else {
+    htmlResultado = "<p class='resultado-final'>Empatou</p>";
+  }
+  
+  divResultado.innerHTML = htmlResultado;
+  exibirCartaMaquina();
+
+  document.getElementById("jogar").desabled = true;
+}
+
