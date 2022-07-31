@@ -10,7 +10,7 @@ var carta1 = {
     }
   };
   
-  var carta2 = {
+var carta2 = {
     nome: "Thiago Fritz",
     imagem:
       "https://i.pinimg.com/236x/a1/95/af/a195af7a5723fa867fe7dd403fff312d.jpg",
@@ -22,7 +22,7 @@ var carta1 = {
     }
   };
   
-  var carta3 = {
+var carta3 = {
     nome: "Alexsander Kothe",
     imagem:
       "https://i.pinimg.com/564x/ff/a1/3a/ffa13a98bbabc6d21ca9440e61180371.jpg",
@@ -34,7 +34,7 @@ var carta1 = {
     }
   };
   
-  var carta4 = {
+var carta4 = {
     nome: "Cristopher Cohen",
     imagem:
       "https://i.pinimg.com/564x/6e/a7/8d/6ea78dc966c50b6d4e374d616e59dccd.jpg",
@@ -46,7 +46,7 @@ var carta1 = {
     }
   };
   
-  var carta5 = {
+var carta5 = {
     nome: "Arthur Cervero",
     imagem:
       "https://i.pinimg.com/564x/76/0c/e2/760ce2c6c9155fb722cf446fecc9e8a8.jpg",
@@ -58,7 +58,7 @@ var carta1 = {
     }
   };
   
-  var carta6 = {
+var carta6 = {
     nome: "Cristopher Cohen",
     imagem:
       "https://i.pinimg.com/564x/6e/a7/8d/6ea78dc966c50b6d4e374d616e59dccd.jpg",
@@ -70,7 +70,7 @@ var carta1 = {
     }
   };
   
-  var carta7 = {
+var carta7 = {
     nome: "Cesar Cohen (Kaiser)",
     imagem:
       "https://i.pinimg.com/564x/9a/1b/04/9a1b04e6822d0b01810e6a6119172acf.jpg",
@@ -82,7 +82,7 @@ var carta1 = {
     }
   };
   
-  var carta8 = {
+var carta8 = {
     nome: "Elizabeth Webber (Liz)",
     imagem:
       "https://i.pinimg.com/564x/60/1e/f9/601ef9c32f06cb13566686fb95b7e221.jpg",
@@ -94,7 +94,7 @@ var carta1 = {
     }
   };
   
-  var carta9 = {
+var carta9 = {
     nome: "Joui Jouki",
     imagem:
       "https://i.pinimg.com/564x/c0/71/2b/c0712b6a1d33b7ecf77487ded264fd0b.jpg",
@@ -106,7 +106,7 @@ var carta1 = {
     }
   };
   
-  var carta10 = {
+var carta10 = {
     nome: "Erin Parker",
     imagem:
       "https://i.pinimg.com/564x/0a/e9/8f/0ae98f05e647e06a3335ce72f95a755c.jpg",
@@ -118,22 +118,34 @@ var carta1 = {
     }
   };
   
-  var cartas = [carta1, carta2, carta3, carta4, carta5, carta6, carta7, carta8, carta9, carta10];
+var cartas = [carta1, carta2, carta3, carta4, carta5, carta6, carta7, carta8, carta9, carta10];
 
   let cartaMaquina;
   let cartaJogador;
 
-  function sortearCarta() {
-      let numeroCartaMaquina = parseInt(Math.random() * 10);
-      cartaMaquina = cartas[numeroCartaMaquina];
+function sortearCarta() {
+    let numeroCartaMaquina = parseInt(Math.random() * 10);
+    cartaMaquina = cartas[numeroCartaMaquina];
 
-      let numeroCartaJogador = parseInt(Math.random() * 10);
-      cartaJogador = cartas[numeroCartaJogador];
+    let numeroCartaJogador = parseInt(Math.random() * 10);
+    cartaJogador = cartas[numeroCartaJogador];
 
-      while (numeroCartaMaquina == numeroCartaJogador) {
-        numeroCartaJogador = parseInt(Math.random() * 10);
-      }
+    while (numeroCartaMaquina == numeroCartaJogador) {
+      numeroCartaJogador = parseInt(Math.random() * 10);
+    }
 
-      document.getElementById("sortear_carta").disabled = true;
-      document.getElementById("jogar").disabled = false;
+    document.getElementById("sortear_carta").disabled = true;
+    document.getElementById("jogar").disabled = false;
+  
+    exibirCartaJogador();
+}
+
+function obtemAtiriburtoSeçecionado() {
+  let radioAtributos = document.getElementsByName("atributo");
+
+  for (var i = 0; i < radioAtributos.length; i++) {
+    if (radioAtributos[i].checked == true) {
+      return radioAtributos[i].ariaValueMax;
+    }
   }
+}
