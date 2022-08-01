@@ -64,6 +64,7 @@ h2, .titulo {
     height: 170px;
     margin: 2rem;
     color: white;
+    z-index: 2;
     text-align: left;
 }
 
@@ -78,6 +79,10 @@ h2, .titulo {
     padding: 1rem;
     border: 2px solid black;
     background-color: black;
+}
+
+.--spacing {
+    margin-left: 2.5rem;
 }
 
 .caixa {
