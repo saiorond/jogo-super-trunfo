@@ -10,6 +10,11 @@ body {
     padding-bottom: 20vh;
 }
 
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
 .logo {
     width: 36em;
     height: 18em;
@@ -24,16 +29,12 @@ h2, .titulo {
     
 }
 
-.container {
-    text-align: center;
-    padding: 20px;
-}
-
 #carta-jogador, #carta-maquina {
     width: 360px;
     height: 500px;
     border-radius: 10px;
     margin-bottom: 20px;
+    margin: 0 auto;
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -48,15 +49,15 @@ h2, .titulo {
     text-align: center;
 }
 
-.carta-imagem {
+#img {
     border: 1px solid black;
-    height: 100px;
+    height: 50px;
+    width: 50px;
     margin: 10px;
 }
 
-.carta-imagem img {
-    height: 100%;
-    width: 100%;
+.carta-imagem {
+  object-fit: contain;
 }
 
 .carta-status {
@@ -73,12 +74,12 @@ h2, .titulo {
 }
 
 .resultado-final {
-    color: white;
-    font-size: 2rem;
+    color: rgb(121, 0, 0);
+    font-weight: bold;
+    font-size: 3.5rem;
     text-transform: uppercase;
     padding: 1rem;
-    border: 2px solid black;
-    background-color: black;
+    text-shadow: 2px 2px whitesmoke;
 }
 
 .--spacing {
@@ -89,6 +90,25 @@ h2, .titulo {
     display: flex;
     justify-content: space-around;
     width: 100%;
+}
+
+.carta-subtitle {
+    z-index: 2;
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#cartas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carta-status p {
+    margin-bottom: 1.4rem;
 }
 
 .botao {
