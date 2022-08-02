@@ -173,7 +173,7 @@ function jogar() {
 function exibirCartaJogador() {
   let divCartaJogador = document.getElementById("carta-jogador");
     divCartaJogador.style.backgroundImage = `url(${cartaJogador.imagem})`;
-    let cartaImagem = "<div class='carta-imagem'>";
+    let cartaImagem = "<div id='img' class='carta-imagem'></div>";
 
   let moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style="width: inherit; height: inherit; position: absolute;">';
 
@@ -198,7 +198,7 @@ function exibirCartaJogador() {
 function exibirCartaMaquina() {
   let divCartaMaquina = document.getElementById("carta-maquina");
   divCartaMaquina.style.backgroundImage = `url(${cartaMaquina.imagem})`;
-  let cartaImagem = "<div id='img' class='carta-imagem'>";
+  let cartaImagem = "<div id='img' class='carta-imagem'></div>";
 
   let moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style="width: inherit; height: inherit; position: absolute;">';
 

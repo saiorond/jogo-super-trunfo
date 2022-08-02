@@ -50,20 +50,20 @@ h2, .titulo {
 }
 
 #img {
-    border: 1px solid black;
-    height: 50px;
-    width: 50px;
-    margin: 10px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
 }
 
-.carta-imagem {
-  object-fit: contain;
+.carta-jogador-imagem {
+    height: 100px;
+    width: 100px;
 }
 
 .carta-status {
     font-size: 0.9rem;
     height: 170px;
-    margin: 2rem;
+    margin-bottom: 2rem;
     color: white;
     z-index: 2;
     text-align: left;
