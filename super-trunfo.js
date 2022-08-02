@@ -172,8 +172,8 @@ function jogar() {
 
 function exibirCartaJogador() {
   let divCartaJogador = document.getElementById("carta-jogador");
-    divCartaJogador.style.backgroundImage = `url(${cartaJogador.imagem})`;
-    let cartaImagem = "<div id='img' class='carta-imagem'></div>";
+   divCartaJogador.style.backgroundImage = `url(${cartaJogador.imagem})`;
+    cartaImagem = "<div id='img' class='carta-imagem'></div>";
 
   let moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style="width: inherit; height: inherit; position: absolute;">';
 

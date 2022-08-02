@@ -32,6 +32,7 @@ h2, .titulo {
 #carta-jogador, #carta-maquina {
     width: 360px;
     height: 500px;
+    overflow: auto;
     border-radius: 10px;
     margin-bottom: 20px;
     margin: 0 auto;
@@ -53,11 +54,6 @@ h2, .titulo {
     height: 20px;
     width: 20px;
     margin: 5px;
-}
-
-.carta-jogador-imagem {
-    height: 100px;
-    width: 100px;
 }
 
 .carta-status {
@@ -102,7 +98,7 @@ h2, .titulo {
 }
 
 #cartas {
-    width: 100%;
+    width: 20px;
     display: flex;
     justify-content: space-between;
 }
