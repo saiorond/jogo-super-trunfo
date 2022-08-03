@@ -202,12 +202,12 @@ function exibirCartaMaquina() {
 
   let moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style="width: inherit; height: inherit; position: absolute;">';
 
-  let tagHtml = "<div id='opcoes' class='carta-status'>"; 
+  let tagHtml = "<div id='opcoes' class='status-maquina'>"; 
 
   let opcoesTexto = "";
   for(var atributo in cartaMaquina.atributos) {
     opcoesTexto += 
-      "<input type='radio' name='atributo' value='" + 
+      "<p name='atributo' value='" + 
       atributo + 
       "'>" + 
       atributo + 
