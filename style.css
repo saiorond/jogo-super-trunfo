@@ -133,3 +133,8 @@ h2, .titulo {
     color: rgb(121, 0, 0);
     font-size: 22px;
 }
+
+.placar {
+    font-size: 60px;
+    color:white;
+}

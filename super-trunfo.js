@@ -122,6 +122,17 @@ var cartas = [carta1, carta2, carta3, carta4, carta5, carta6, carta7, carta8, ca
 
   let cartaMaquina;
   let cartaJogador;
+  let placar = [0, 0, 0];
+
+exbibePlacar();
+
+function exbibePlacar() {
+  let exbibePlacar0 = document.getElementById("placar0");
+  exbibePlacar0.innerHTML = placar[0];
+
+  let exbibePlacar1 = document.getElementById("placar1");
+  exbibePlacar1.innerHTML = placar[1];
+}
 
 function sortearCarta() {
     let numeroCartaMaquina = parseInt(Math.random() * 10);
@@ -170,6 +181,14 @@ function jogar() {
 
   document.getElementById("btnJogar").disabled = true;
   exibirCartaMaquina();
+
+htmlResultado += "<p class='placar'>| Placar: (Você) " + placar[0];
+htmlResultado += " x "
+htmlResultado += placar[1] + " (Maquina) |</p>";
+
+divResultado.innerHTML = htmlResultado;
+exbibePlacar();
+
 }
 
 function exibirCartaJogador() {
@@ -185,7 +204,7 @@ function exibirCartaJogador() {
   let opcoesTexto = "";
   for(var atributo in cartaJogador.atributos) {
     opcoesTexto += 
-      "<input type='radio' onclick='habilitarJogar()' name='atributo' value='" + 
+      "<input type='radio'  name='atributo' value='" + 
       atributo + 
       "'>" + 
       atributo + 
@@ -224,15 +243,4 @@ function exibirCartaMaquina() {
 
   let nome = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`;
   divCartaMaquina.innerHTML = moldura + nome + cartaImagem + tagHtml + opcoesTexto + "</div>";
-}
-
-let placar = [0, 0, 0];
-
-exbibePlacar();
-
-function exbibePlacar() {
-  let exbibePlacar0 = document.getElementById("placar0");
-  exbibePlacar0.innerHTML = placar[0];
-  let exbibePlacar1 = document.getElementById("placar1");
-  exbibePlacar1.innerHTML = placar[1];
 }
