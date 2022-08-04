@@ -167,8 +167,13 @@ function jogar() {
   divResultado.innerHTML = htmlResultado;
   exibirCartaMaquina();
 
-  document.getElementById("btnJogar").desabled = true;
+  habilitarJogar();
 }
+
+function habilitarJogar() {
+  document.getElementById("btnJogar").disabled = false;
+}
+
 
 function exibirCartaJogador() {
   let divCartaJogador = document.getElementById("carta-jogador");
@@ -178,11 +183,12 @@ function exibirCartaJogador() {
   let moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style="width: inherit; height: inherit; position: absolute;">';
 
   let tagHtml = "<div id='opcoes' class='carta-status'>";
+  
 
   let opcoesTexto = "";
   for(var atributo in cartaJogador.atributos) {
     opcoesTexto += 
-      "<input type='radio' name='atributo' value='" + 
+      "<input type='radio' onclick='habilitarJogar()' name='atributo'onclick='habilitarJogar()' value='" + 
       atributo + 
       "'>" + 
       atributo + 
@@ -190,10 +196,13 @@ function exibirCartaJogador() {
       cartaJogador.atributos[atributo] + 
       "<br>" ;
   }
+  
 
   let nome = `<p class="carta-subtitle">${cartaJogador.nome}</p>`;
   divCartaJogador.innerHTML = moldura + nome + cartaImagem + tagHtml + opcoesTexto + "</div>";
+
 }
+
 
 function exibirCartaMaquina() {
   let divCartaMaquina = document.getElementById("carta-maquina");
