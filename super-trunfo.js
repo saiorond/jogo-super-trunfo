@@ -244,3 +244,14 @@ function exibirCartaMaquina() {
   let nome = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`;
   divCartaMaquina.innerHTML = moldura + nome + cartaImagem + tagHtml + opcoesTexto + "</div>";
 }
+
+function zerarJogo() {
+  document.getElementById("sotear_carta").disabled = false;
+  document.getElementById("btnJogar").disabled = true;
+
+  let divResultado = document.getElementById("resultado");
+  divResultado.innerHTML = "";
+  
+  placar = [0, 0, 0];
+  exbibePlacar();
+}
