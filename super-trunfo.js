@@ -157,9 +157,11 @@ function jogar() {
   if (
     cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
       htmlResultado ="<p class='resultado-final'>Você venceu</p>";
+      placar[0]++
   } else if (
     cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
       htmlResultado ="<p class='resultado-final'>Você perdeu</p>";
+      placar[1]++
   } else {
     htmlResultado = "<p class='resultado-final'>Empatou</p>";
   }
@@ -222,4 +224,15 @@ function exibirCartaMaquina() {
 
   let nome = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`;
   divCartaMaquina.innerHTML = moldura + nome + cartaImagem + tagHtml + opcoesTexto + "</div>";
+}
+
+let placar = [0, 0, 0];
+
+exbibePlacar();
+
+function exbibePlacar() {
+  let exbibePlacar0 = document.getElementById("placar0");
+  exbibePlacar0.innerHTML = placar[0];
+  let exbibePlacar1 = document.getElementById("placar1");
+  exbibePlacar1.innerHTML = placar[1];
 }
