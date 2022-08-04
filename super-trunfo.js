@@ -165,20 +165,15 @@ function jogar() {
   }
   
   divResultado.innerHTML = htmlResultado;
+
+  document.getElementById("btnJogar").disabled = true;
   exibirCartaMaquina();
-
-  habilitarJogar();
 }
-
-function habilitarJogar() {
-  document.getElementById("btnJogar").disabled = false;
-}
-
 
 function exibirCartaJogador() {
   let divCartaJogador = document.getElementById("carta-jogador");
    divCartaJogador.style.backgroundImage = `url(${cartaJogador.imagem})`;
-    cartaImagem = "<div id='img' class='carta-imagem'></div>";
+    cartaImagem = "<div class='carta-imagem'></div>";
 
   let moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style="width: inherit; height: inherit; position: absolute;">';
 
@@ -188,7 +183,7 @@ function exibirCartaJogador() {
   let opcoesTexto = "";
   for(var atributo in cartaJogador.atributos) {
     opcoesTexto += 
-      "<input type='radio' onclick='habilitarJogar()' name='atributo'onclick='habilitarJogar()' value='" + 
+      "<input type='radio' onclick='habilitarJogar()' name='atributo' value='" + 
       atributo + 
       "'>" + 
       atributo + 
