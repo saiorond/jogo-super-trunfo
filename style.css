@@ -44,7 +44,6 @@ h2, .titulo {
     background-position-x: 5px;
     background-position-y: 10px;
     border-radius: 33px; 
-    
 }
 
 #carta-jogador h3 {
@@ -78,9 +77,9 @@ h2, .titulo {
 .resultado-final {
     color: rgb(121, 0, 0);
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 55px;
     text-transform: uppercase;
-    padding: 1rem;
+    padding: 20px;
     text-shadow: 2px 2px whitesmoke;
 }
 
@@ -136,16 +135,16 @@ h2, .titulo {
 
 .botoes {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    left: 50%;
 }
 
 .placar {
-    font-size: 60px;
-    color:white;
     display: flex;
-   align-items: center;
-   justify-content: center;
-   right: 50%;
+    justify-content: center;
+    position: relative;
+    font-size: 45px;
+    color: whitesmoke;
+    text-shadow: 2px 2px rgb(121, 0, 0);;
+    display: flex;
+    align-items: center;
 }

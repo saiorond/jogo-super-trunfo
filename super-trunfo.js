@@ -139,7 +139,7 @@ function zerarCarta() {
   cartaMaquina.remoce;
 
   let virandoCarta = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style="width: inherit; height: inherit; position: absolute;">';
-  cartasViradas.innerHTML = virandoCarta;
+  cartasViradas.innerHTML = "";
 }
 
 function sortearCarta() {
@@ -189,9 +189,9 @@ function jogar() {
   document.getElementById("btnJogar").disabled = true;
   exibirCartaMaquina();
 
-  htmlResultado += "<p class='placar'>| Placar: (Você) " + placar[0];
+  htmlResultado += "<p class='placar'>| Placar: Você " + placar[0];
   htmlResultado += " x "
-  htmlResultado += placar[1] + " (Maquina) |</p>";
+  htmlResultado += placar[1] + " Maquina |</p>";
 
   divResultado.innerHTML = htmlResultado;
   exbibePlacar();
