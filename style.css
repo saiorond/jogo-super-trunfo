@@ -134,7 +134,18 @@ h2, .titulo {
     font-size: 22px;
 }
 
+.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+}
+
 .placar {
     font-size: 60px;
     color:white;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   right: 50%;
 }

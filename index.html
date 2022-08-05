@@ -17,11 +17,20 @@
         <img src="./imagens/op-logo.png" class="logo" alt="Imagem de fundo escrito Ordem Paranormal">
         <h1 class="titulo">Super Trunfo</h1>
         <button id="sortear_carta" onclick="sortearCarta()" class="botao">Sortear Carta</button>
-    </div>
+        
+        <h2>Escolha seu atributo</h2>
+        
+        <div class="botoes">
+            <button class="botao" type="button" id="btnJogar" onclick="jogar()" disabled="false">Jogar</button>
+    
+            <div class="zerar">
+                <button onclick="zerarJogo()" class="botao" id="zerar_jogo">Zerar Jogo</button>
+            </div>
+        </div>
 
     <form>
         <br>
-        <h2>Escolha seu atributo</h2>
+      
         
         <div class="caixa">
             <div>
@@ -38,18 +47,14 @@
             </div>
 
             <div class="placar">
-                <p id="placar0">0</p>
-                <p id="placar1">0</p>
+                <p id="placar0">0 </p>
+                <p> x </p>
+                <p id="placar1"> 0</p>
             </div>
 
         </div>
 
-            <button class="botao" type="button" id="btnJogar" onclick="jogar()" disabled="false">Jogar</button>
-
-            <div class="zerar">
-                <button onclick="zerarJogo()" class="botao" id="zerar_jogo">Zerar Jogo</button>
-            </div>
-
+    </div>
         <div id="resultado"></div>
     </form>
 </div>
