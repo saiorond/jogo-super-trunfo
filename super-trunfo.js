@@ -134,6 +134,14 @@ function exbibePlacar() {
   exbibePlacar1.innerHTML = placar[1];
 }
 
+function zerarCarta() {
+  cartaJogador.remove;
+  cartaMaquina.remoce;
+
+  let virandoCarta = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style="width: inherit; height: inherit; position: absolute;">';
+  cartasViradas.innerHTML = virandoCarta;
+}
+
 function sortearCarta() {
     let numeroCartaMaquina = parseInt(Math.random() * 10);
     cartaMaquina = cartas[numeroCartaMaquina];
@@ -176,19 +184,31 @@ function jogar() {
   } else {
     htmlResultado = "<p class='resultado-final'>Empatou</p>";
   }
-  
   divResultado.innerHTML = htmlResultado;
 
   document.getElementById("btnJogar").disabled = true;
   exibirCartaMaquina();
 
-htmlResultado += "<p class='placar'>| Placar: (Você) " + placar[0];
-htmlResultado += " x "
-htmlResultado += placar[1] + " (Maquina) |</p>";
+  htmlResultado += "<p class='placar'>| Placar: (Você) " + placar[0];
+  htmlResultado += " x "
+  htmlResultado += placar[1] + " (Maquina) |</p>";
 
-divResultado.innerHTML = htmlResultado;
-exbibePlacar();
+  divResultado.innerHTML = htmlResultado;
+  exbibePlacar();
+  jogarDeNovo();
 
+}
+
+function jogarDeNovo() {
+  document.getElementById("sortear_carta").disabled = false;
+  zerarCarta();
+  sortearCarta();
+
+  document.getElementById("sortear_carta").disabled = true;
+  document.getElementById("btnJogar").disabled = false;
+  jogar();
+
+  return
 }
 
 function exibirCartaJogador() {
@@ -216,7 +236,6 @@ function exibirCartaJogador() {
 
   let nome = `<p class="carta-subtitle">${cartaJogador.nome}</p>`;
   divCartaJogador.innerHTML = moldura + nome + cartaImagem + tagHtml + opcoesTexto + "</div>";
-
 }
 
 
@@ -252,6 +271,8 @@ function zerarJogo() {
   let divResultado = document.getElementById("resultado");
   divResultado.innerHTML = "";
   
+  zerarCarta();
+
   placar = [0, 0, 0];
   exbibePlacar();
 }
