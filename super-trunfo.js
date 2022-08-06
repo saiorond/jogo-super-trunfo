@@ -134,8 +134,12 @@ function exbibePlacar() {
   exbibePlacar1.innerHTML = placar[1];
 }
 
-function zerarCarta() {
-  let tirandoCarta = noLoop(exibirCartaJogador());
+function zerarCarta(id) {
+  var opcoes = document.getElementById(id);
+  // Mostra o verso da carta
+  var opcoesTexto =
+    '<img src="https://i.ibb.co/wsPTMsK/carta-verso.png" style=" width: inherit; height: inherit; position: absolute;">';
+  opcoes.innerHTML = opcoesTexto;
 }
 
 function sortearCarta() {
@@ -197,7 +201,7 @@ function jogar() {
 
 function jogarDeNovo() {
   document.getElementById("sortear_carta").disabled = false;
-  //zerarCarta();
+  zerarCarta();
   sortearCarta();
 
   document.getElementById("sortear_carta").disabled = true;
@@ -261,8 +265,8 @@ function exibirCartaMaquina() {
 }
 
 function zerarJogo() {
- // document.getElementById("sotear_carta").disabled = false;
- //  document.getElementById("btnJogar").disabled = true;
+ let desabilitarBotao = document.getElementById("sotear_carta").disabled = false;
+ let habilitarBotao = document.getElementById("btnJogar").disabled = true;
 
   let divResultado = document.getElementById("resultado");
   divResultado.innerHTML = "";
