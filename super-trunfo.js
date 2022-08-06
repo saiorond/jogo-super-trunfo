@@ -135,11 +135,7 @@ function exbibePlacar() {
 }
 
 function zerarCarta() {
-  cartaJogador.remove;
-  cartaMaquina.remoce;
-
-  let virandoCarta = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style="width: inherit; height: inherit; position: absolute;">';
-  cartasViradas.innerHTML = "";
+  let tirandoCarta = noLoop(exibirCartaJogador());
 }
 
 function sortearCarta() {
@@ -201,7 +197,7 @@ function jogar() {
 
 function jogarDeNovo() {
   document.getElementById("sortear_carta").disabled = false;
-  zerarCarta();
+  //zerarCarta();
   sortearCarta();
 
   document.getElementById("sortear_carta").disabled = true;
@@ -265,14 +261,14 @@ function exibirCartaMaquina() {
 }
 
 function zerarJogo() {
-  document.getElementById("sotear_carta").disabled = false;
-  document.getElementById("btnJogar").disabled = true;
+ // document.getElementById("sotear_carta").disabled = false;
+ //  document.getElementById("btnJogar").disabled = true;
 
   let divResultado = document.getElementById("resultado");
   divResultado.innerHTML = "";
   
-  zerarCarta();
+  
 
   placar = [0, 0, 0];
-  exbibePlacar();
+  //exbibePlacar();
 }
