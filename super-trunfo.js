@@ -1,3 +1,14 @@
+var cartaBranca = {
+  nome: "",
+  imagem: "",
+  atributos: {
+      Sanidade: "",
+      Força: "",
+      Ocultismo: "",
+      Inteligência: ""
+  }
+};
+
 var carta1 = {
     nome: "Daniel Hartmann",
     imagem:
@@ -134,14 +145,6 @@ function exbibePlacar() {
   exbibePlacar1.innerHTML = placar[1];
 }
 
-function zerarCarta(id) {
-  var opcoes = document.getElementById(id);
-  // Mostra o verso da carta
-  var opcoesTexto =
-    '<img src="https://i.ibb.co/wsPTMsK/carta-verso.png" style=" width: inherit; height: inherit; position: absolute;">';
-  opcoes.innerHTML = opcoesTexto;
-}
-
 function sortearCarta() {
     let numeroCartaMaquina = parseInt(Math.random() * 10);
     cartaMaquina = cartas[numeroCartaMaquina];
@@ -196,12 +199,11 @@ function jogar() {
   divResultado.innerHTML = htmlResultado;
   exbibePlacar();
   jogarDeNovo();
-
 }
 
 function jogarDeNovo() {
   document.getElementById("sortear_carta").disabled = false;
-  zerarCarta();
+  //zerarCartaJogador();
   sortearCarta();
 
   document.getElementById("sortear_carta").disabled = true;
@@ -231,8 +233,7 @@ function exibirCartaJogador() {
       " " + 
       cartaJogador.atributos[atributo] + 
       "<br>" ;
-  }
-  
+  }  
 
   let nome = `<p class="carta-subtitle">${cartaJogador.nome}</p>`;
   divCartaJogador.innerHTML = moldura + nome + cartaImagem + tagHtml + opcoesTexto + "</div>";
@@ -264,15 +265,34 @@ function exibirCartaMaquina() {
   divCartaMaquina.innerHTML = moldura + nome + cartaImagem + tagHtml + opcoesTexto + "</div>";
 }
 
+function zerarCartaJogador() {  
+    let revelar = document.getElementById("carta-jogador");
+    //revelar.style.backgroundImage = `${cartaBranca.imagem}`;
+    //let jogador1 = document.getElementById("carta-jogador");
+    let nome = `<p class="carta-subtitle">${cartaBranca.nome}</p>`;
+    revelar.style.backgroundImage = `url(${cartaBranca.imagem})`;
+    //let cartaZerada = document.getElementById("carta-jogador");
+    let opcoesTexto = "";
+    for(var atributo in cartaBranca.atributos) {
+    opcoesTexto += 
+      "<p type='text' name='atributo' value='" + 
+      atributo + 
+      "'>" + 
+      " " + 
+      "</p>" ;
+  }  
+    revelar.innerHTML = nome + opcoesTexto;
+}
+
 function zerarJogo() {
- let desabilitarBotao = document.getElementById("sotear_carta").disabled = false;
- let habilitarBotao = document.getElementById("btnJogar").disabled = true;
+   // document.getElementById("sotear_carta").disabled = false;
+   // document.getElementById("btnJogar").disabled = true;
+
+  zerarCartaJogador();
 
   let divResultado = document.getElementById("resultado");
   divResultado.innerHTML = "";
   
-  
-
   placar = [0, 0, 0];
-  //exbibePlacar();
+  exbibePlacar();
 }
